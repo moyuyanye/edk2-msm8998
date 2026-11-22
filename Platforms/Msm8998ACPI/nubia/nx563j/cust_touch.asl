@@ -88,7 +88,7 @@ Device (TSC1)
                     }
                     If (LEqual (Arg2, One))
                     {
-                        Return (Package (0x02) { Zero, One })
+                        Return (One)
                     }
                 }
                 Return (Buffer (One) { Zero })
