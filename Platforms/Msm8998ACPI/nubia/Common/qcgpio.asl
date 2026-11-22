@@ -3,7 +3,7 @@
 //
 Device (GIO0)
 {
-    Name (_HID, "QCOM0016")  // _HID: Hardware ID
+    Name (_HID, "QCOM0217")  // _HID: Hardware ID
     Alias (\_SB.PSUB, _SUB)
     Name (_DEP, Package (One)  // _DEP: Dependencies
     {
