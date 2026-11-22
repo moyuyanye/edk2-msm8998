@@ -1,6 +1,7 @@
 Device (TSC1)
         {
             Name (_HID, "MSHW1003")  // _HID: Hardware ID
+            Name (_CID, "PNP0C50")  // _CID: Compatible ID for Windows HIDI2C
             Name (_UID, One)  // _UID: Unique ID
             Name (_DEP, Package (0x03)  // _DEP: Dependencies
             {
@@ -87,7 +88,7 @@ Device (TSC1)
                     }
                     If (LEqual (Arg2, One))
                     {
-                        Return (Package (0x02) { Zero, 0x0020 })
+                        Return (Package (0x02) { Zero, One })
                     }
                 }
                 Return (Buffer (One) { Zero })
