@@ -76,4 +76,20 @@ Device (TSC1)
                     ^^PEP0.FLD0 = DBUF /* \_SB_.TSC1.DBUF */
                 }
             }
+            // ==== ADDED for Windows hidi2c (HID over I2C _DSM) ====
+            Method (_DSM, 4, NotSerialized)
+            {
+                If (LEqual (Arg0, ToUUID ("3CDFF6F7-4267-4555-AD05-B30A3D8938DE")))
+                {
+                    If (LEqual (Arg2, Zero))
+                    {
+                        Return (Buffer (One) { 0x03 })
+                    }
+                    If (LEqual (Arg2, One))
+                    {
+                        Return (Package (0x02) { Zero, 0x0020 })
+                    }
+                }
+                Return (Buffer (One) { Zero })
+            }
         }
