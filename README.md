@@ -81,3 +81,5 @@ fastboot boot boot_DEVICE.img
 - BigfootACA and his [SimpleInit](https://github.com/BigfootACA/simple-init) and [LinuxSimpleMassStorage](https://github.com/BigfootACA/linux-simple-mass-storage)
 - fxsheep and his original edk2-sagit
 - All the developers and members of [Renegade Project](https://github.com/edk2-porting/) for offering efforts, equipments, valuable documents and more
+
+<!-- build trigger: nx563j touch DSM -->
